@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest --verbose --detectOpenHandles",
     "start": "node index.js",
+    "postinstall": "npm rebuild bcrypt --build-from-source",
     "dev": "nodemon index.js"
   },
   "keywords": [],
