@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Link Example</title>
+  <style>
+    /* Embedded CSS */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <h1>WELCOME TO MY PAGE</h1>
+  <!-- Button linking to another HTML file -->
+  <a href="/frontend/html/login.html" class="button" onclick="navigate()">Go to Another Page</a>
+
+  <script>
+    // Embedded JavaScript
+    function navigate() {
+      console.log("Navigating to another page...");
+    }
+  </script>
 </body>
 </html>
