@@ -86,7 +86,7 @@ document.getElementById('add-task-form').onsubmit = async (e) => {
     const title = document.getElementById('task-title').value;
     const description = document.getElementById('task-description').value;
     const priority = document.getElementById('task-priority').value;
-    const deadline = document.getElementById('task-deadline').value;
+    const deadline = document.getElementById('task-deadline').value || '';
     const taskId = document.getElementById('task-id').value;
 
     const taskData = { title, description, priority, deadline };

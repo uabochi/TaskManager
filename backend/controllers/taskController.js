@@ -7,7 +7,13 @@ const createTask = [
     // Input validation using express-validator
     body('title').notEmpty().withMessage('Title is required'),
     body('priority').isIn(['low', 'medium', 'high']).withMessage('Priority must be one of low, medium, high'),
-    body('deadline').optional().isISO8601().withMessage('Invalid date format'), // Validate deadline if provided
+    // Handle deadline validation
+    body('deadline')
+        .optional({ checkFalsy: true }) // This allows `null` or empty string to be treated as omitted
+        .isISO8601().withMessage('Invalid date format, should be yyyy-MM-dd'), // Validate if provided
+
+    //body('deadline').optional().isISO8601().withMessage('Invalid date format'), // Validate deadline if provided
+    
 
     async (req, res) => {
         // Handle validation errors
@@ -165,8 +171,5 @@ const searchTasks = async (req, res) => {
         res.status(500).json({ error: 'Server error' });
     }
 };
-
-
-
 
 module.exports = { createTask, getTasks, getTask, updateTask, deleteTask, filterTasks, searchTasks };
