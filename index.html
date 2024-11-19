@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Button Link Example</title>
+  <title>Welcome</title>
   <style>
-    /* Embedded CSS */
-    body {
+
+body {
       font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
@@ -16,31 +16,22 @@
       background-color: #f4f4f4;
     }
 
-    .button {
-      padding: 10px 20px;
-      font-size: 16px;
-      color: #fff;
-      background-color: #007bff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .button:hover {
-      background-color: #0056b3;
+    .message {
+      font-size: 32px;
+      font-weight: bold;
+      color: #007bff;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <!-- Button linking to another HTML file -->
-  <a href="/frontend/html/login.html" class="button" onclick="navigate()">Go to Another Page</a>
+
+    <div class="message">Welcome to your Task Manager</div>
 
   <script>
-    // Embedded JavaScript
-    function navigate() {
-      console.log("Navigating to another page...");
-    }
+    setTimeout(() => {
+      window.location.href = "/frontend/html/login.html";
+    }, 5000);
   </script>
 </body>
 </html>
