@@ -120,6 +120,7 @@ header .btn#logout-btn:hover {
 
 /* Task Table */
 .tasks-table {
+    border: 2px solid green;
     width: 100%;
     border-collapse: collapse;
     background-color: #fff;
@@ -138,8 +139,14 @@ header .btn#logout-btn:hover {
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
-
+.tasks-table tr {
+    border: 2px solid green;
+    width: 100%;
+}
 .tasks-table tr:hover {
+    min-width: 100%;
+    overflow-x: hidden;
+    border: 2px solid green;
     background-color: #f1f1f1;
 }
 
